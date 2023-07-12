@@ -25,5 +25,5 @@ public class GeneradorPelicula {
     public String obtenerUrl(){
         return url;
     }
-    
+          
 }

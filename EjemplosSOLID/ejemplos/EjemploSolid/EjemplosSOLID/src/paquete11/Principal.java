@@ -17,6 +17,8 @@ public class Principal {
         a través de un toString
         */
         
-        
+        ArchivoLectura lectura = new ArchivoLectura("datos/usuarios.txt");
+        lectura.establecerListaUsuarios();
+        System.out.println(lectura);
     }
 }

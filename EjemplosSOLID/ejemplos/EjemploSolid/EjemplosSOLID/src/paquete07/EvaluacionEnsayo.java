@@ -29,7 +29,6 @@ public class EvaluacionEnsayo extends Evaluacion{
         return totalProblemas;
     }
     
-    
     @Override
     public void establecerPromedioObjetivas(){
         // throw new RuntimeException("Sin implementar establecerPromedioObjetivas");
@@ -39,17 +38,22 @@ public class EvaluacionEnsayo extends Evaluacion{
     public double obtenerPromedioObjetivas(){
         // throw new RuntimeException("Sin implementar obtenerPromedioObjetivas");
         return 0.0;
-
     }
     
+    @Override
     public void establecerPromedioEnsayo(){
-          
-          promedioEnsayo = obtenerTotalProblemas()/obtenerNumeroProblemas();
-
+        promedioEnsayo = obtenerTotalProblemas()/obtenerNumeroProblemas();
     }
     
+    @Override
     public double obtenerPromedioEnsayo(){
-          return promedioEnsayo;
-
+        return promedioEnsayo;
     }
+    
+    /*
+    @Override
+    public abstract void establecerPromedio(){
+        promedio = obtenerTotalProblemas()/obtenerNumeroProblemas();
+    }
+    */
 }

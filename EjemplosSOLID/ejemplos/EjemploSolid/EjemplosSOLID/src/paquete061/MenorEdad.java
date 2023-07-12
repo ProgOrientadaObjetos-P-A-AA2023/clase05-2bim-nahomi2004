@@ -29,6 +29,4 @@ public class MenorEdad extends Persona{
     public void establecerTarjeta(){
         tarjeta = obtenerRepresentante().obtenerTarjeta();
     }
-    
-    
 }

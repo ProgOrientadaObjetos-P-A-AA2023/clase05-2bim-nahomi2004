@@ -18,7 +18,5 @@ public class MenorEdad extends Persona{
     @Override
     public String obtenerTarjeta(){
         throw new RuntimeException("un niño no tiene tarjeta");
-    }
-    
-    
+    } 
 }

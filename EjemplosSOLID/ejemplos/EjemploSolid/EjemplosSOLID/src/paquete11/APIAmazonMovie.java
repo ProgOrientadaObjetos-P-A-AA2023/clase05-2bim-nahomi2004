@@ -9,6 +9,8 @@ package paquete11;
 public class APIAmazonMovie implements APIMovie{
     
     private String apiKey;
+    private String nombre;
+    private String servicio;
     
     @Override
     public void establecerApiKey(String ak){
@@ -18,6 +20,11 @@ public class APIAmazonMovie implements APIMovie{
     @Override
     public String obtenerApiKey(){
         return apiKey;
+    }
+
+    @Override
+    public void establecerAPIMovie(String u, String s) {
+        
     }
     
 }
