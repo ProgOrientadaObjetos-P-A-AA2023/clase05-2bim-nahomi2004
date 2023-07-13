@@ -8,12 +8,12 @@ package paquete11;
  *
  * @author D E L L
  */
-public class APIDisneyPlus implements APIMovie {
+public class APIDisney implements APIMovie {
     private String apiKey;
     
     @Override
     public void establecerApiKey(String ak){
-        apiKey = ak+"DISNEYPLUS123123";
+        apiKey = ak+"DISNEY123123";
     }
     
     @Override

@@ -42,7 +42,7 @@ public class GeneradorPelicula {
                 apii.establecerApiKey(String.valueOf(rand.nextInt(lim)));  
                 establecerLlave(apii);
             } else if (i>=3 && i<6) {
-                apii = new APIDisneyPlus();
+                apii = new APIDisney();
                 apii.establecerApiKey(String.valueOf(rand.nextInt(lim)));
                 establecerLlave(apii);
             } else if (i>=6 && i<9) {
