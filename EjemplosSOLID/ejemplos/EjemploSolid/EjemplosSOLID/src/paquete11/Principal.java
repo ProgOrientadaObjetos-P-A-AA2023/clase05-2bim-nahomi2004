@@ -4,9 +4,6 @@
  */
 package paquete11;
 
-import java.io.File;
-import java.util.ArrayList;
-
 public class Principal {
     public static void main(String[] args) {
         
@@ -20,15 +17,7 @@ public class Principal {
         a través de un toString
         */               
         
-        GeneradorPelicula gp = new GeneradorPelicula();
-        ArrayList<String> urls = new ArrayList<>();
-        ArrayList<GeneradorPelicula> lista = new ArrayList<>();
-        
-        String nombreArchivo = "usuarios.txt";
-        String rutaArchivo = String.format("datos/%s", nombreArchivo);
-        
-        File f = new File(rutaArchivo);
-        
+        GeneradorPelicula gp = new GeneradorPelicula();        
         gp.establecerUrls();
         System.out.printf("%s",gp);
     }

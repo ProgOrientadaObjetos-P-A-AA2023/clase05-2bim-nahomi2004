@@ -111,7 +111,9 @@ public class GeneradorPelicula {
             catch (FileNotFoundException e) {
                 System.err.println("Error al leer del archivo: " + e);
             }
-        }        
+        }   
+        
+        cadena = String.format("%s\n\n", cadena);
         return cadena;
     }    
 }
