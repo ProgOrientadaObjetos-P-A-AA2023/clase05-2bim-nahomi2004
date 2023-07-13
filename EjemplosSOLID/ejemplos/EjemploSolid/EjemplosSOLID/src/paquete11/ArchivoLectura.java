@@ -18,7 +18,7 @@ import java.util.Arrays;
  */
 public class ArchivoLectura {
 
-    private Scanner entrada;
+    /*private Scanner entrada;
     private String nombreArchivo;
     private String rutaArchivo;
     private ArrayList<APIMovie> lista;
@@ -26,7 +26,7 @@ public class ArchivoLectura {
 
     public ArchivoLectura () {
         nombreArchivo = "usuarios.txt";
-        rutaArchivo = String.format("data/%s", nombreArchivo);
+        rutaArchivo = String.format("datos/%s", nombreArchivo);
         // data/profesores.txt
         File f = new File(rutaArchivo); // data/profesores.txt
         if (f.exists()) {
@@ -71,10 +71,22 @@ public class ArchivoLectura {
                 ArrayList<String> linea_partes = new ArrayList<>(
                         Arrays.asList(linea.split(";"))
                 );
-                
-                APIMovie p = new APIMovie(linea_partes.get(0),
-                        linea_partes.get(1));
-                lista.add(p);
+                if (linea_partes.get(2).equals("Netflix")) {
+                    APIMovie p = new APINetflix(linea_partes.get(1),linea_partes.get(2));
+                    lista.add(p);
+                }
+                if (linea_partes.get(2).equals("Startplus")) {
+                    APIMovie p = new APIStarPlus(linea_partes.get(1),linea_partes.get(2));
+                    lista.add(p);
+                }                
+                if (linea_partes.get(2).equals("Amazon")) {
+                    APIMovie p = new APIAmazonMovie(linea_partes.get(1),linea_partes.get(2));
+                    lista.add(p);
+                }
+                if (linea_partes.get(2).equals("Disney")) {
+                    APIMovie p = new APIDisneyPlus(linea_partes.get(1),linea_partes.get(2));
+                    lista.add(p);
+                }
 
             } // fin de while
         }
@@ -94,16 +106,17 @@ public class ArchivoLectura {
 
     @Override
     public String toString() {
-        String cadena = "Lista Profesores\n";
+        String cadena = "Lista Usuarios y servicios\n";
         for (int i = 0; i < obtenerLista().size(); i++) {
-            Profesor profTemporal = obtenerLista().get(i); // Obj. Profesor
-            cadena = String.format("%s(%d) %s %s\n", cadena,
+            APIMovie aux = obtenerLista().get(i); // Obj. Profesor
+            cadena = String.format("%s(%d) %s %s %s\n", 
+                    cadena,
                     i + 1,
-                    profTemporal.obtenerNombre(), // obtenerLista().get(i).obtenerNombre(),
-                    profTemporal.obtenerTipo());    // obtenerLista().get(i).obtenerTipo());
+                    aux.obtenerUsuario(), // obtenerLista().get(i).obtenerNombre(),
+                    aux.obtenerServicio(),
+                    aux.obtenerApiKey());    // obtenerLista().get(i).obtenerTipo());
         }
         return cadena;
     }    
-    // arreglo.length es para los estáticos, arreglo.size es para los dinámicos
-}
+    // arreglo.length es para los estáticos, arreglo.size es para los dinámicos*/
 }

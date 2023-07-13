@@ -4,6 +4,9 @@
  */
 package paquete11;
 
+import java.io.File;
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         
@@ -15,10 +18,32 @@ public class Principal {
         Random); la url final debe contener el tipo de servicio y el user
         Por cada objeto de tipo GeneradoPelicula presentar la información 
         a través de un toString
-        */
+        */               
         
-        ArchivoLectura lectura = new ArchivoLectura("datos/usuarios.txt");
-        lectura.establecerListaUsuarios();
-        System.out.println(lectura);
+        GeneradorPelicula gp = new GeneradorPelicula();
+        ArrayList<String> urls = new ArrayList<>();
+        ArrayList<GeneradorPelicula> lista = new ArrayList<>();
+        
+        String nombreArchivo = "usuarios.txt";
+        String rutaArchivo = String.format("datos/%s", nombreArchivo);
+        
+        File f = new File(rutaArchivo);
+        
+        gp.establecerUrls();
+        System.out.printf("%s",gp);
     }
 }
+
+/*APINetflix api1 = new APINetflix();
+        api1.establecerApiKey(String.valueOf(rand.nextInt(upperbound)));
+        APINetflix api2 = new APINetflix();
+        api2.establecerApiKey(String.valueOf(rand.nextInt(upperbound)));
+        APINetflix api3 = new APINetflix();
+        api3.establecerApiKey(String.valueOf(rand.nextInt(upperbound)));
+        
+        APIDisneyPlus api4 = new APIDisneyPlus();
+        api4.establecerApiKey(String.valueOf(rand.nextInt(upperbound)));
+        APIDisneyPlus api5 = new APIDisneyPlus();
+        api5.establecerApiKey(String.valueOf(rand.nextInt(upperbound)));
+        APIDisneyPlus api6 = new APIDisneyPlus();
+        api6.establecerApiKey(String.valueOf(rand.nextInt(upperbound)));*/

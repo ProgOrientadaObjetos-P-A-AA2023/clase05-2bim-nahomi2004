@@ -6,10 +6,10 @@
 package paquete11;
 
 
-public class APINetflix implements APIMovie{
+public class APINetflix implements APIMovie {
     
     private String apiKey;
-    
+        
     @Override
     public void establecerApiKey(String ak){
         apiKey = ak+"NETFLIX123123";
@@ -18,6 +18,5 @@ public class APINetflix implements APIMovie{
     @Override
     public String obtenerApiKey(){
         return apiKey;
-    }
-    
+    } 
 }
